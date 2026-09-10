@@ -1,0 +1,13 @@
+{
+  "name": "bedo",
+  "productName": "Be · Do · Have",
+  "version": "0.1.0",
+  "description": "Be → Do → Have: a daily companion",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^33.4.11"
+  }
+}

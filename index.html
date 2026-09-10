@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'">
+  <title>Be · Do · Have</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wordmark">Be <span class="dot">·</span> Do <span class="dot">·</span> Have</div>
+    <nav class="datenav">
+      <button id="prevDay" class="navbtn" title="Previous day">◀</button>
+      <div id="dateLabel" class="datelabel" title="Click to return to today">—</div>
+      <button id="nextDay" class="navbtn" title="Next day">▶</button>
+    </nav>
+  </header>
+
+  <p class="verse">“Be fruitful, and multiply … and have dominion.” <span class="ref">— Genesis 1:28</span></p>
+
+  <main class="grid">
+    <section class="col be">
+      <div class="colhead"><span class="colword">BE</span><span class="colsub">who you are today</span></div>
+      <input id="beInput" class="be-input" type="text" maxlength="24" autocomplete="off" placeholder="fruitful">
+      <div id="chips" class="chips"></div>
+    </section>
+
+    <section class="col do">
+      <div class="colhead"><span class="colword">DO</span><span class="colsub">what flows from it</span></div>
+      <ul id="doList" class="dolist"></ul>
+      <button id="addDo" class="addbtn">+ one more</button>
+    </section>
+
+    <section class="col have">
+      <div class="colhead"><span class="colword">HAVE</span><span class="colsub">what this bears</span></div>
+      <textarea id="haveInput" class="have-input" placeholder="Write it as already given…"></textarea>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>Everything stays on this machine.</span>
+    <span class="version">Be · Do · Have 0.1.0</span>
+  </footer>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

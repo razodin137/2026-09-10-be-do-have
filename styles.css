@@ -1,0 +1,216 @@
+:root {
+  --bg: #f7f2e8;
+  --card: #fffdf7;
+  --ink: #26221a;
+  --muted: #8a8070;
+  --line: #e6dcc8;
+  --be: #b4552d;
+  --do: #3f6b4f;
+  --have: #9a7b23;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.45 "Segoe UI", system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0 40px 18px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0 6px;
+}
+
+.wordmark {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+}
+
+.wordmark .dot { color: var(--muted); }
+
+.datenav { display: flex; align-items: center; gap: 10px; }
+
+.navbtn {
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.navbtn:hover { background: var(--card); }
+
+.datelabel {
+  min-width: 180px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.verse {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-style: italic;
+  font-size: 14.5px;
+}
+
+.verse .ref { font-style: normal; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+  flex: 1;
+  margin-top: 18px;
+}
+
+.col {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;
+}
+
+.colhead {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.colword {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  letter-spacing: 0.14em;
+}
+
+.be .colword { color: var(--be); }
+.do .colword { color: var(--do); }
+.have .colword { color: var(--have); }
+
+.colsub { color: var(--muted); font-size: 13px; }
+
+.be-input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--line);
+  background: transparent;
+  font-family: Georgia, serif;
+  font-size: 44px;
+  padding: 4px 2px 8px;
+  color: var(--ink);
+  outline: none;
+}
+
+.be-input:focus { border-bottom-color: var(--be); }
+.be-input::placeholder { color: #d8cdb8; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+
+.chip {
+  border: 1px solid var(--line);
+  background: transparent;
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 13px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.chip:hover { border-color: var(--be); color: var(--be); }
+
+.dolist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.dorow { display: flex; align-items: center; gap: 10px; }
+
+.check {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--do);
+  border-radius: 7px;
+  background: transparent;
+  cursor: pointer;
+  color: transparent;
+  font-size: 13px;
+  line-height: 1;
+  flex: none;
+  padding: 0;
+}
+
+.check.on { background: var(--do); color: #fff; }
+
+.dtext {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  padding: 6px 2px;
+  font-size: 16px;
+  color: var(--ink);
+  outline: none;
+}
+
+.dtext:focus { border-bottom-color: var(--do); }
+.dorow.done .dtext { text-decoration: line-through; color: var(--muted); }
+
+.addbtn {
+  margin-top: 10px;
+  align-self: flex-start;
+  border: none;
+  background: none;
+  color: var(--do);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 2px;
+}
+
+.addbtn:hover { text-decoration: underline; }
+
+.have-input {
+  width: 100%;
+  flex: 1;
+  resize: none;
+  border: none;
+  background: transparent;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink);
+  outline: none;
+  font-family: Georgia, serif;
+}
+
+.have-input::placeholder { color: #d8cdb8; }
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 12.5px;
+  margin-top: 16px;
+}
